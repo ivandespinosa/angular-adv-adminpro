@@ -21,15 +21,9 @@ export class Usuario {
 
         if ( this.img === undefined ) {
             return `${ base_url }/upload/usuarios/no-image`;
-        }
-
-        if ( this.img.includes('https') ) {
+        } else if ( this.img.includes('https') ) {
             return this.img;
-        }
-        //console.log(this.img);
-        
-
-        if ( this.img ) {
+        } else if ( this.img ) {
             return `${ base_url }/upload/usuarios/${ this.img }`;
         } else {
             return `${ base_url }/upload/usuarios/no-image`;
